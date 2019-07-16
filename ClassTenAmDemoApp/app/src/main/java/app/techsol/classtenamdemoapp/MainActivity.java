@@ -1,24 +1,30 @@
 package app.techsol.classtenamdemoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
+    ListView mStduentLIstView;
 
+    CardView mmStudentCV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Snackbar.make(findViewById(R.id.getView),"I'm snackbar", Snackbar.LENGTH_INDEFINITE).setAction("ok", new View.OnClickListener() {
+        mmStudentCV=findViewById(R.id.mStudentCV);
+        mmStudentCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "I'm clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, ViewStduentsActivity.class));
             }
-        }).show();
+        });
     }
 }
