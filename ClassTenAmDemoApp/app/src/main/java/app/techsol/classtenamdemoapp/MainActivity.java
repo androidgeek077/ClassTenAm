@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     ListView mStduentLIstView;
+    String nameStr="Waqas", emailStr="example@gmail.com";
 
     CardView mmStudentCV;
     @Override
@@ -23,7 +24,17 @@ public class MainActivity extends AppCompatActivity {
         mmStudentCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ViewStduentsActivity.class));
+                Intent intent=new Intent(MainActivity.this, ViewStduentsActivity.class);
+                intent.putExtra("name",nameStr);
+                intent.putExtra("email",emailStr);
+                startActivity(intent);
+
+                Snackbar.make(view, "I'm snackbar", Snackbar.LENGTH_LONG).setAction("ok", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    startActivity(new Intent(getBaseContext(), ViewStduentsActivity.class));
+                    }
+                }).show();
             }
         });
     }
