@@ -1,4 +1,4 @@
-package app.techsol.classtenamdemoapp;
+package app.techsol.classtenamdemoapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import app.techsol.classtenamdemoapp.R;
 
 public class ViewStduentsActivity extends AppCompatActivity {
     ListView mStudentListVW;

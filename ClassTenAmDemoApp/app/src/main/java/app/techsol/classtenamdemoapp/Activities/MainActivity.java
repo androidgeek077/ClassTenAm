@@ -1,4 +1,4 @@
-package app.techsol.classtenamdemoapp;
+package app.techsol.classtenamdemoapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -7,9 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import app.techsol.classtenamdemoapp.R;
 
 public class MainActivity extends AppCompatActivity {
     ListView mStduentLIstView;
