@@ -1,0 +1,32 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/image"
+        android:src="@drawable/bio"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <me.wangyuwei.particleview.ParticleView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/particleView"
+        app:pv_background_color="#fff"
+        app:pv_host_text="FASHION"
+        app:pv_host_text_size="24sp"
+        app:pv_particle_text="PRAXIS"
+        app:pv_particle_text_size="30sp"
+        app:pv_text_color="#FFC107"
+        app:pv_text_anim_time="2000"
+        app:pv_spread_anim_time="2000"
+        app:pv_host_text_anim_time="2000" />
+
+
+</LinearLayout>
