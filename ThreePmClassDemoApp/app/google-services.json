@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "921119972293",
+    "firebase_url": "https://threepmclassdemoapp.firebaseio.com",
+    "project_id": "threepmclassdemoapp",
+    "storage_bucket": "threepmclassdemoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921119972293:android:a23a4da0928c6e00",
+        "android_client_info": {
+          "package_name": "app.infosys.threepmclassdemoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921119972293-qmj855ehl4u0kb91sgvir5d7cajmfmuj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.infosys.threepmclassdemoapp",
+            "certificate_hash": "331951b7558c76aa5a2a1c0c4d0e9c25c323a93b"
+          }
+        },
+        {
+          "client_id": "921119972293-1j5rqdgkb06kcesn82ltbqlv0q2hpvto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDODQGO3CaNAf5HZRYyAjAyJMl09ifdX34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921119972293-1j5rqdgkb06kcesn82ltbqlv0q2hpvto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
