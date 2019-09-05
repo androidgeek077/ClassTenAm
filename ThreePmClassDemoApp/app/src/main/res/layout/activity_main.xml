@@ -12,6 +12,23 @@
         android:id="@+id/mPasswordET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Name"
+        android:id="@+id/mNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:inputType="number"
+        android:hint="Phone"
+        android:id="@+id/mPhoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Address"
+        android:id="@+id/mAddresET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/mLoginBtn"
         android:text="Login"

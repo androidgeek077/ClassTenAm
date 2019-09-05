@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+<ImageView
+    android:id="@+id/mUserImgVw"
+    android:layout_weight="0.3"
+    android:layout_width="0dp"
+    android:layout_height="match_parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_weight="0.7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="WAqas"
+            android:id="@+id/mNameTV"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/mPhoneNoTV"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

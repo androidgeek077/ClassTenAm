@@ -12,6 +12,31 @@
         android:id="@+id/mPasswordET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Phone No"
+        android:id="@+id/mPhoneNoET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Address"
+        android:id="@+id/mAddressET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Name"
+        android:id="@+id/mNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/mSelectedImgVw"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <Button
+        android:id="@+id/mSelectImgBtn"
+        android:text="Select Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/mSignupBtn"
         android:text="Signup"

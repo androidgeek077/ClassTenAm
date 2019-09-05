@@ -20,17 +20,30 @@ public class MainActivity extends AppCompatActivity {
     EditText mEmailET, mPasswordET;
     String mEmailStr, mPasswordStr;
 
+    PreferencesManager preferencesManager;
     Button mLoginBtn, mSignupBtn;
 
     FirebaseAuth auth;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        preferencesManager=new PreferencesManager(this);
+        if (preferencesManager.userIsLogged()){
+            startActivity(new Intent(getBaseContext(), DashBoardActivity.class));
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        auth=FirebaseAuth.getInstance();
-        mEmailET=findViewById(R.id.mEmailET);
-        mPasswordET=findViewById(R.id.mPasswordET);
-        mLoginBtn=findViewById(R.id.mLoginBtn);
+        preferencesManager=new PreferencesManager(this);
+        auth = FirebaseAuth.getInstance();
+        mEmailET = findViewById(R.id.mEmailET);
+        mPasswordET = findViewById(R.id.mPasswordET);
+        mLoginBtn = findViewById(R.id.mLoginBtn);
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,8 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 auth.signInWithEmailAndPassword(mEmailStr, mPasswordStr).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(MainActivity.this, "SignedIn Successfully", Toast.LENGTH_SHORT).show();
+                        if (task.isSuccessful()) {
+                            String uid=auth.getCurrentUser().getUid();
+                            preferencesManager.SetLogin(uid, true);
+                            startActivity(new Intent(getBaseContext(), DashBoardActivity.class));
+                            finish();
                         }
 
                     }
@@ -52,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        mSignupBtn=findViewById(R.id.mSignupBtn);
+        mSignupBtn = findViewById(R.id.mSignupBtn);
         mSignupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     void getStrings() {
         mEmailStr = mEmailET.getText().toString();
         mPasswordStr = mPasswordET.getText().toString();
